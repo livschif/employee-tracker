@@ -1,27 +1,43 @@
-department
+DROP DATABASE IF EXISTS employee_db;
+-- creates employee_db database --
+CREATE DATABASE employee_db;
+USE employee_db;
 
-id: INT PRIMARY KEY
+-- creates a table department, role, and employee within employee_db --
 
-name: VARCHAR(30) to hold department name
+CREATE TABLE department (
 
-role
+id INT PRIMARY KEY AUTO_INCREMENT,
 
-id: INT PRIMARY KEY
+name VARCHAR(30) NOT NULL
+);
 
-title: VARCHAR(30) to hold role title
+CREATE TABLE role (
 
-salary: DECIMAL to hold role salary
+id INT PRIMARY KEY AUTO_INCREMENT,
 
-department_id: INT to hold reference to department role belongs to
+title VARCHAR(30) NOT NULL,
 
-employee
+salary DECIMAL NOT NULL,
 
-id: INT PRIMARY KEY
+department_id INT, 
+INDEX dep_ind (department_id),
+CONSTRAINT fk_department FOREIGN KEY (department_id) REFERENCES department(id) ON DELETE SET NULL
+);
 
-first_name: VARCHAR(30) to hold employee first name
+CREATE TABLE employee (
+    
+id INT PRIMARY KEY AUTO_INCREMENT,
 
-last_name: VARCHAR(30) to hold employee last name
+first_name VARCHAR(30) NOT NULL,
 
-role_id: INT to hold reference to employee role
+last_name VARCHAR(30) NOT NULL,
 
-manager_id: INT to hold reference to another employee that is the manager of the current employee (null if the employee has no manager)
+role_id INT,
+INDEX role_ind (role_id),
+CONSTRAINT fk_role FOREIGN KEY (role_id) REFERENCES role(id) ON DELETE SET NULL,
+
+manager_id INT,
+INDEX manager_ind (manager_id),
+CONSTRAINT fk_manager FOREIGN KEY (manager_id) REFERENCES employee(id) ON DELETE SET NULL
+);
