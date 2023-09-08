@@ -1,29 +1,33 @@
-INSERT INTO department (name)
-VALUES 
-('IT'),
-('Finance & Accounting'),
-('Sales & Marketing'),
-('Operations');
-
-INSERT INTO role (title, salary, department_id)
+INSERT INTO departments (name)
 VALUES
-('Full Stack Developer', 80000, 1),
-('Software Engineer', 120000, 1),
-('Accountant', 10000, 2), 
-('Finanical Analyst', 150000, 2),
-('Marketing Coordindator', 70000, 3), 
-('Sales Lead', 90000, 3),
-('Project Manager', 100000, 4),
-('Operations Manager', 90000, 4);
+('Sales'),
+('Engineering'),
+('Finance'),
+('Legal'),
+('Human Resources');
 
+INSERT INTO roles (title, salary, department_id)
+VALUES
+('Salesperson', 80000, 1),
+('Sales Lead', 100000, 1),
+('Engineer', 120000, 2),
+('Lead Engineer', 150000, 2),
+('Accountant', 125000, 3),
+('Chief Financial Officer', 300000, 3),
+('Lawyer', 190000, 4),
+('Legal Team Lead', 250000, 4),
+('Human Resources Employee', 80000, 5),
+('Human Resources Director', 100000, 5);
 
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES 
-('Mark', 'Miller', 2, null),
-('Devin', 'Anderson', 1, 1),
-('Mary', 'Brown', 4, null),
-('Ashley', 'Jones', 3, 3),
-('Tyler', 'Moore', 6, null),
-('Ana', 'Sanchez', 5, 5),
-('Lewis', 'Allen', 7, null),
-('Katherine', 'Green', 8, 7);
+INSERT INTO employees (first_name, last_name, role_id, manager_id)
+VALUES
+('Jon', 'Donkowski', 1, 2),
+('Mike', 'Chan', 2, null),
+('Ashley', 'Rodriguez', 3, 4),
+('Kevin', 'Tupik', 4, null),
+('Malia', 'Brown', 5, 6),
+('Sarah', 'Lourd', 6, null),
+('Tom', 'Allen', 7, 8),
+('Jackie', 'Meyer', 8, null),
+('Tyson', 'Mack', 9, 10),
+('Rebecca', 'Flounder', 10, null);
