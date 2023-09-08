@@ -21,6 +21,8 @@
   
     node index.js
 
+[Walktrough Video](https://youtu.be/abnraIbdd4U)
+
   ## Usage 
   Once running select from any of the choices in the main menu and you will be shown a table with the results of your selection. You may be able to insert data if you are prompted to do so and it will add it to the already existing table. 
 
@@ -29,7 +31,7 @@
 
   ## Questions
   If there are any additional questions you can email me at oliviaschif@gmail.com
-  don't forget to check out my other repositories at livschif on GitHub!
+  don't forget to check out my other repositories at [livschif](https://github.com/livschif) on GitHub!
 
   ## License
   MIT_License
