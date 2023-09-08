@@ -1,19 +1,35 @@
-# employee-tracker
+# Employee Tracker
 
-GIVEN a command-line application that accepts user input
-WHEN I start the application
-THEN I am presented with the following options: view all departments, view all roles, view all employees, add a department, add a role, add an employee, and update an employee role
-WHEN I choose to view all departments
-THEN I am presented with a formatted table showing department names and department ids
-WHEN I choose to view all roles
-THEN I am presented with the job title, role id, the department that role belongs to, and the salary for that role
-WHEN I choose to view all employees
-THEN I am presented with a formatted table showing employee data, including employee ids, first names, last names, job titles, departments, salaries, and managers that the employees report to
-WHEN I choose to add a department
-THEN I am prompted to enter the name of the department and that department is added to the database
-WHEN I choose to add a role
-THEN I am prompted to enter the name, salary, and department for the role and that role is added to the database
-WHEN I choose to add an employee
-THEN I am prompted to enter the employee’s first name, last name, role, and manager, and that employee is added to the database
-WHEN I choose to update an employee role
-THEN I am prompted to select an employee to update and their new role and this information is updated in the database
+ ![License](https://img.shields.io/badge/license-MIT_License-blue)
+  
+  ## Table of Contents
+  - [Project description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Questions](#questions)
+  - [License](#license)
+    
+  ## Description 
+  Using Mysql, Node.js, and Inquirer to create a back-end application that helps track departments, and employee roles in a database.
+
+  ## Installation 
+  To install start by doing a git clone with the repository link in your terminal, install all the npm packages with  
+  
+    npm i 
+  
+  and then to start the server run 
+  
+    node index.js
+
+  ## Usage 
+  Once running select from any of the choices in the main menu and you will be shown a table with the results of your selection. You may be able to insert data if you are prompted to do so and it will add it to the already existing table. 
+
+  ![Ex. Screenshot1](./assets/employ.ex.png)
+  ![Ex. Screenshot2](./assets/employ.ex2.png)
+
+  ## Questions
+  If there are any additional questions you can email me at oliviaschif@gmail.com
+  don't forget to check out my other repositories at livschif on GitHub!
+
+  ## License
+  MIT_License
